@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class Palindrome {
-    public static void main(String[] args) {
+    /*public static void main(String[] args) {
         Scanner sc = new Scanner(System.in) ;
             int n = sc.nextInt();
             int[] a= new int[n];
@@ -31,6 +31,33 @@ public class Palindrome {
         else {
              System.out.println("Not palindrome");
         }
+    }*/
+    public static void main (String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num = sc.nextInt();
+        int rev =reverse(num);
+        
+        palli(num,rev);
+    }
+    public static int reverse(int n) {
+        
+        int rev=0;
+        while(n>0) {
+        int last=n%10;
+        rev= (rev*10)+last;
+        n=n/10;
+        }
+
+        return rev;
+
+    }
+
+    public static void palli(int o,int r ) {
+        if(o==r) 
+        System.out.println(" Palindrome" );
+        else
+        System.out.println(" Not Palindrome ");
     }
     }
+    
     
