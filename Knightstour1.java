@@ -1,4 +1,4 @@
-public class Knightstour {
+public class Knightstour1 {
     public static void solve(int[][]  board , int row , int col, int move) {
         //base-codition
         if(row<0|| row >=board.length || col<0 || col>=board.length ||board[row][col]!=0 ) {

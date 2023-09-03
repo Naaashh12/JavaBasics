@@ -1,5 +1,5 @@
 
-/*import java.util.*;
+import java.util.*;
 
 public class tUf {
 
@@ -66,4 +66,4 @@ public class tUf {
         int cnt = numberOfInversions(a, n);
         System.out.println("The number of inversions are: " + cnt);
     }
-}*/
+}
