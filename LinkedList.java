@@ -128,6 +128,7 @@ public class LinkedList {
             }
             return idx+1;
         }
+
         public int recsearch(int key) {
             return helper( head, key);
         }
@@ -144,6 +145,7 @@ public class LinkedList {
             }
             head=prev;
         }
+        
         public Node findMid(Node head) {
             Node slow = head;
             Node fast = head;
