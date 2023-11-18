@@ -33,7 +33,7 @@ public class SumofPairs {
         int maxsum=Integer.MIN_VALUE;
         //Prefix array
         int[] prefix= new int[num.length];
-        prefix[0]=num[0]
+        prefix[0]=num[0];
         for(int i=1;i<prefix.length;i++) {
         prefix[i]=prefix[i-1]+num[i];
 
