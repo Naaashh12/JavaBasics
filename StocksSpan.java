@@ -1,16 +1,15 @@
-import java.util.ArrayList;
-import java.util.Stack;
-
+import java.util.*;
 public class StocksSpan {
-    public static void stockspan(int[] a) {
-        ArrayList<Integer> list = new ArrayList<>();
-        ArrayList<Integer> span = new ArrayList<>();
+
+    public static void stockspan(int[] arr) {
         Stack<Integer> s = new Stack<>();
-        for(int i=0;i<a.length;i++) {
-            if(s.isEmpty()){
+        ArrayList<Integer> list = new ArrayList<>();
+
+        for(int i =0; i<arr.length;i++) {
+            if(s.isEmpty()) {
                 list.add(-1);
             } else {
-                while(!s.isEmpty()&&s.peek()<=a[i]) {
+                while(!s.isEmpty()&& arr[s.peek()]<=arr[i]) {
                     s.pop();
                 }
                 if(s.isEmpty()) {
@@ -21,13 +20,12 @@ public class StocksSpan {
             }
             s.push(i);
         }
-        for(int i =0;i<a.length;i++) {
-            span.put(i-list.get(i));
+        for(int i =0; i<arr.length;i++) {
+            System.out.print(i-list.get(i) + " ");
         }
     }
-
     public static void main(String[] args) {
-        int[] arr ={100,80,60,70,60,85,100};
-        stockspan(arr);
+        int[] a = {100, 80, 60, 70, 60, 75, 85};
+        stockspan(a);
     }
 }
